@@ -1,0 +1,23 @@
+﻿@model IEnumerable<PetShop.Models.Animal>
+@{
+	ViewData["Title"] = "Home Page";
+}
+<link rel="stylesheet" href="~/css/HomePage.css" asp-append-version="true" />
+<div class="text-center">
+	<h1 class="display-4">Welcome to Pet4U</h1>
+	<h3> Our best models</h3>
+</div>
+<div class="containers">
+	@foreach (var a in Model)
+	{
+		<div class="card">
+			<img class="card-img" src="@a.PictureSrc" height="300" width="300">
+			<div class="card-header">@a.Name</div>
+			<div class="card-body"> @a.Description</div>
+			<div class="card-footer">number of comments: @a.Comments!.Count</div>
+		</div>
+	}
+</div>
+
+
+

@@ -1,0 +1,36 @@
+﻿@{
+	ViewData["Title"] = "Index";
+}
+<div class="text-center">
+	<h1>Admin view</h1>
+</div>
+@using (Html.BeginForm("AddNewAnimal", "Admin", FormMethod.Post))
+{
+	<input type="submit" value="New animal" />
+}
+<form class="text-center" action="/Admin/Index" method="post">
+	<fieldset>
+		<p style="font-size:20px; margin-top:30px; margin-bottom:30px; "> Search By Category</p>
+		<select id="Category" style="width:130px; " name="Category">
+			<option value="Show All">Show All</option>
+			<option value="Birds">Birds</option>
+			<option value="Mammal">Mammals</option>
+			<option value="Fish">Fishes</option>
+			<option value="Amphibians">Amphibians</option>
+			<option value="reptiles">reptiles</option>
+		</select>
+		<input class="submit" style="width:100px;margin-left:30px;" type="submit" value="Show Me" />
+	</fieldset>
+	<div style="display: flex">
+		@foreach (var a in Model)
+		{
+			<div class="card">
+				<img class="card-img" src="@a.PictureSrc" height="300" width="300">
+				<div class="card-header">@a.Name</div>
+				<a asp-action="Edit" asp-route-id="@a.AnimalId">edit</a>
+				<a asp-action="Delete" asp-route-id="@a.AnimalId">delete</a>
+				<div class="card-footer">number of comments: @a.Comments!.Count</div>
+			</div>
+		}
+	</div>
+</form>

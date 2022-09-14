@@ -1,0 +1,45 @@
+﻿@model PetShop.Models.Animal
+@{
+	ViewData["Title"] = "AnimalDetailes";
+}
+
+<h1 class="text-center">@Model.Name Detailes</h1>
+<table style="width: 50%" class="table">
+	<tbody>
+		<tr>
+			<th scope="row">Name</th>
+			<td>@Model.Name</td>
+		</tr>
+		<tr>
+			<th scope="row">Age</th>
+			<td>@Model.Age</td>
+		</tr>
+		<tr>
+			<th scope="row">Description</th>
+			<td>@Model.Description</td>
+		</tr>
+		<tr>
+			<th scope="row">Category</th>
+			<td>@Model.Category!.Name</td>
+		</tr>
+	</tbody>
+</table>
+<section>
+	<h3>Comments:</h3>
+	<ul class="list-group">
+		@foreach (var c in Model.Comments!)
+		{
+			<li class="list-group-item">@c.Content</li>
+		}
+	</ul>
+</section>
+@using (Html.BeginForm("AddComment", "Catalloge", new { id = Model.AnimalId }, FormMethod.Post))
+{
+	<lable>Add comment</lable>
+	@Html.TextBox("comment")
+	<button type="submit">Submit</button>
+}
+
+
+
+

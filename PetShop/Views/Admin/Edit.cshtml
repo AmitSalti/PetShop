@@ -1,0 +1,41 @@
+﻿@model PetShop.Models.Animal
+@{
+	ViewData["Title"] = "Edit";
+}
+@using (Html.BeginForm("EditSubmited", "Admin", FormMethod.Post))
+{
+	<form>
+		@Html.HiddenFor(a => a.AnimalId)
+		<div class="form-group">
+			<label for="name">Animal name</label> <br>
+			@Html.TextBoxFor(a => a.Name)
+		</div>
+		<div class="form-group">
+			<label for="age">Animal age</label><br>
+			@Html.TextBoxFor(a => a.Age, new{@type="number"})
+		</div>
+		<div class="form-group">
+			<label for="description">Animal description</label><br>
+			@Html.TextBoxFor(a => a.Description)
+		</div>
+		<div class="form-group">
+			<fieldset>
+				<label>Choose category</label>
+				<br>
+				<select id="categoryId" style="width:130px" name="categoryId">
+					<option value=2>Birds</option>
+					<option value=1>Mammals</option>
+					<option value=3>Fishes</option>
+					<option value=4>Amphibians</option>
+					<option value=5>reptiles</option>
+				</select>
+			</fieldset>
+		</div>
+		<div class="form-group">
+			<label for="picture">Animal picture</label><br>
+			@Html.TextBoxFor(a => a.PictureSrc)
+		</div>
+		<input type="submit" />
+	</form>
+}
+

@@ -1,0 +1,35 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.image{
+    width: 100px;
+    height: 200px;
+}
+.card{
+    display:flex;
+    width: 200px;
+    height: 300px;
+}
+.containers {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
