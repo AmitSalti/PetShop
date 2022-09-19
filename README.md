@@ -4,7 +4,7 @@ my own personal pet-website with asp.net core, in the website you can search ani
 you can also check what animals have the most comments and add comments.
 
 ## 👨🏼‍💼 Admin
-there is also a option to enter as admin, just add to the url / and add animal, delete animal or edit animal . 
+there is also a option to enter as admin, just add to the url "/admin" and you will have the option to add animal, delete animal or edit animal . 
 
 ## 📚 Stack 
 
