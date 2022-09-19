@@ -17,6 +17,9 @@ for style i used bootsrap
 # 🐳 Docker 
 if you want to run my project with docker , just run this two lines in the terminal !
 
+docker pull amitsalti/pet-shop:latest
+docker run -d -p 8080:80 --name pet-shop pet-shop
+
 # project preiview
 
 ![image](https://user-images.githubusercontent.com/45597333/190240177-98937a2a-f511-4be9-b95b-a7b8444b8368.png)
