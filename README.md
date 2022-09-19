@@ -4,7 +4,7 @@ my own personal pet-website with asp.net core, in the website you can search ani
 you can also check what animals have the most comments and add comments.
 
 ## 👨🏼‍💼 Admin
-there is also a option to enter as admin and add animal, delete animal or edit animal . 
+there is also a option to enter as admin, just add to the url / and add animal, delete animal or edit animal . 
 
 ## 📚 Stack 
 
@@ -17,9 +17,9 @@ for style i used bootsrap
 # 🐳 Docker 
 if you want to run my project with docker , just run this two lines in the terminal !
 
-docker pull amitsalti/pet-shop:latest
+docker pull amitsalti/petshop:1.0
 
-docker run -d -p 8080:80 --name pet-shop pet-shop
+docker run -d -p 80 amitsalti/petshop:1.0
 
 # project preiview
 
